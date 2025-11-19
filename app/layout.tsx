@@ -1,17 +1,11 @@
-import type { Metadata } from 'next'
-import type { ReactNode } from 'react'
+import type { ReactNode } from 'react';
 
-import './globals.css'
-
-export const metadata: Metadata = {
-  title: 'Teamgeist',
-  description: 'Next.js + PostgreSQL + Docker Starter',
-}
+import './globals.css';
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang='de'>
       <body>{children}</body>
     </html>
-  )
+  );
 }

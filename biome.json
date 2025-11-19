@@ -43,7 +43,7 @@
       "enabled": true,
       "jsxQuoteStyle": "single",
       "quoteStyle": "single",
-      "semicolons": "asNeeded",
+      "semicolons": "always",
       "trailingCommas": "es5"
     }
   }

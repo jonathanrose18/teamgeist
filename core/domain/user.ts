@@ -1,6 +1,7 @@
+import type { Id } from './types';
+
 export type User = {
-  id: string
-  name: string
-  email: string
-  image?: string | null
-}
+  readonly email: string;
+  readonly id: Id;
+  readonly name?: string | null;
+};

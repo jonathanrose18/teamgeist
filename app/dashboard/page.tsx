@@ -4,7 +4,7 @@ import { redirect } from 'next/navigation';
 import { makeGetCurrentUserUseCase } from '@/core/application/auth/use-cases/get-current-user';
 import { BetterAuthPort } from '@/infrastructure/auth/auth-port';
 
-export default async function Page() {
+export default async function DashboardPage() {
   const h = await headers();
   const authPort = new BetterAuthPort();
   const getCurrentUserUseCase = makeGetCurrentUserUseCase({ authPort });
