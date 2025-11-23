@@ -1,0 +1,3 @@
+const url = import.meta.env.VITE_API_URL;
+console.log(url);
+export default url;

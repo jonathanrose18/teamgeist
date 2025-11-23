@@ -2,12 +2,13 @@
   "name": "api",
   "type": "module",
   "scripts": {
-    "dev": "tsx watch src/index.ts",
+    "dev": "tsx watch src/index.ts --host 3000",
     "build": "tsc",
     "start": "node dist/index.js"
   },
   "dependencies": {
     "@hono/node-server": "^1.19.6",
+    "dotenv": "^16.6.1",
     "hono": "^4.10.6"
   },
   "devDependencies": {
