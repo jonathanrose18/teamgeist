@@ -1,7 +1,10 @@
 # misc
 .DS_Store
 
-# Environment files
+# environment
 .env
 .env.*
 !.env.example
+
+# vscode
+.vscode

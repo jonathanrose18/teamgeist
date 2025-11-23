@@ -1,11 +1,11 @@
-import { serve } from "@hono/node-server";
-import { Hono } from "hono";
+import { serve } from '@hono/node-server';
+import { Hono } from 'hono';
 
-import "dotenv/config";
+import 'dotenv/config';
 
 const app = new Hono();
 
-app.get("/", (c) => c.json({ status: "ok" }));
+app.get('/', c => c.json({ status: 'ok' }));
 
 const port = Number(process.env.PORT) || 4000;
 
