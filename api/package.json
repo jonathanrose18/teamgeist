@@ -2,16 +2,20 @@
   "name": "api",
   "type": "module",
   "scripts": {
-    "dev": "tsx watch src/index.ts",
     "build": "tsc",
-    "start": "node dist/index.js",
+    "dev": "tsx watch src/index.ts",
+    "drizzle:generate": "drizzle-kit generate",
+    "drizzle:migrate": "drizzle-kit migrate",
+    "format": "biome format src --write",
     "lint": "biome check src",
-    "format": "biome format src --write"
+    "migrate": "npm run drizzle:migrate",
+    "start": "node dist/index.js"
   },
   "dependencies": {
     "@hono/node-server": "^1.19.6",
     "better-auth": "^1.4.1",
     "dotenv": "^16.6.1",
+    "drizzle-orm": "^0.44.7",
     "hono": "^4.10.6",
     "pg": "^8.16.3"
   },
@@ -19,6 +23,7 @@
     "@biomejs/biome": "^2.3.7",
     "@types/node": "^20.11.17",
     "@types/pg": "^8.15.6",
+    "drizzle-kit": "^0.31.7",
     "tsx": "^4.7.1",
     "typescript": "^5.8.3"
   }

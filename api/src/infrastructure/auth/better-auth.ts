@@ -1,4 +1,5 @@
 import { betterAuth } from 'better-auth';
+import { drizzleAdapter } from 'better-auth/adapters/drizzle';
 
 import { pool } from '../database/postgres.js';
 
@@ -23,7 +24,7 @@ if (!secret) {
 export const auth = betterAuth({
   basePath: '/auth',
   baseURL: baseURL,
-  database: pool,
+  database: drizzleAdapter(pool, { provider: 'pg' }),
   emailAndPassword: { enabled: true, disableSignUp: false },
   secret: secret,
   trustedOrigins: [appOrigin],

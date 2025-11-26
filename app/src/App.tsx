@@ -1,22 +1,13 @@
-import { useSession } from './lib/auth';
+import { useSession } from '@/lib/auth';
+
+import './index.css';
 
 function App() {
   const { data: session } = useSession();
 
-  if (!session) {
-    return (
-      <div>
-        <h1>App</h1>
-      </div>
-    );
-  }
+  console.log(session);
 
-  return (
-    <div>
-      <h1>App</h1>
-      <p>Hi {session.user.name}</p>
-    </div>
-  );
+  return null;
 }
 
 export default App;

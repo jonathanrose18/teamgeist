@@ -3,3 +3,9 @@ dist
 .env
 .git
 .DS_Store
+
+# Drizzle internal files
+drizzle/meta/
+drizzle/*.json
+drizzle/*.ts
+drizzle/*.lock

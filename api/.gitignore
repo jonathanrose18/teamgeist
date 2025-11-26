@@ -26,3 +26,9 @@ lerna-debug.log*
 
 # misc
 .DS_Store
+
+# Drizzle generated metadata & internal cache
+drizzle/meta/
+drizzle/*.json
+drizzle/*.ts
+drizzle/*.lock
