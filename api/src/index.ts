@@ -1,12 +1,15 @@
 import { Hono } from 'hono';
 import { cors } from 'hono/cors';
+import { logger } from 'hono/logger';
 import { serve } from '@hono/node-server';
 import 'dotenv/config';
 
 import { authRoutes } from './routes/auth.js';
+import { clubRoutes } from './routes/club.js';
 
 const app = new Hono();
 
+app.use(logger());
 app.use(
   '/*',
   cors({
@@ -18,6 +21,7 @@ app.use(
 );
 
 app.route('/auth', authRoutes);
+app.route('/club', clubRoutes);
 
 const port = Number(process.env.PORT || 4000);
 

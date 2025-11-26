@@ -93,10 +93,8 @@ export const accountRelations = relations(account, ({ one }) => ({
 }));
 
 export const club = pgTable('club', {
-  clubName: text('name'),
-  clubSlug: text('slug'),
+  clubName: text('name').notNull(),
   createdAt: timestamp('createdAt', { withTimezone: true }).notNull().defaultNow(),
   id: integer('id').primaryKey().default(1),
-  initialized: boolean('initialized').notNull().default(false),
   updatedAt: timestamp('updatedAt', { withTimezone: true }).notNull().defaultNow(),
 });
