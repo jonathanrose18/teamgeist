@@ -12,6 +12,7 @@ docker compose up --build
 Services:
 - Frontend: http://localhost:3000
 - API: http://localhost:4000
+- Adminer: http://localhost:8080
 - Postgres: internal at `db:5432` (credentials come from `api/.env`)
 
 ## Hot-reload workflow (API + app locally, DB in Docker)
