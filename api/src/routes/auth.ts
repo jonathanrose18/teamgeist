@@ -4,6 +4,6 @@ import { auth } from '../infrastructure/auth/better-auth.js';
 
 const authRoutes = new Hono();
 
-authRoutes.all('/*', c => auth.handler(c.req.raw));
+authRoutes.all('/*', context => auth.handler(context.req.raw));
 
 export { authRoutes };

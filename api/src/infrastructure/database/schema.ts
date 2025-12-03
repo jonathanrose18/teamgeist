@@ -1,4 +1,4 @@
-import { pgTable, boolean, text, timestamp, integer, index } from 'drizzle-orm/pg-core';
+import { pgTable, boolean, text, timestamp, index } from 'drizzle-orm/pg-core';
 import { relations } from 'drizzle-orm';
 
 export const user = pgTable('user', {
@@ -91,10 +91,3 @@ export const accountRelations = relations(account, ({ one }) => ({
     references: [user.id],
   }),
 }));
-
-export const club = pgTable('club', {
-  clubName: text('name').notNull(),
-  createdAt: timestamp('createdAt', { withTimezone: true }).notNull().defaultNow(),
-  id: integer('id').primaryKey().default(1),
-  updatedAt: timestamp('updatedAt', { withTimezone: true }).notNull().defaultNow(),
-});

@@ -32,3 +32,6 @@ drizzle/meta/
 drizzle/*.json
 drizzle/*.ts
 drizzle/*.lock
+
+# build
+dist
