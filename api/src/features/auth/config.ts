@@ -1,3 +1,4 @@
+import { admin, organization } from 'better-auth/plugins';
 import { betterAuth } from 'better-auth';
 import { drizzleAdapter } from 'better-auth/adapters/drizzle';
 
@@ -25,7 +26,8 @@ export const auth = betterAuth({
   basePath: '/auth',
   baseURL: baseURL,
   database: drizzleAdapter(pool, { provider: 'pg' }),
-  emailAndPassword: { enabled: true, disableSignUp: false },
+  emailAndPassword: { enabled: true, disableSignUp: true },
+  plugins: [admin(), organization()],
   secret: secret,
   trustedOrigins: [appOrigin],
 });
