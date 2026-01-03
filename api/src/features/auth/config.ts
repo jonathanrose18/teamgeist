@@ -1,7 +1,7 @@
 import { betterAuth } from 'better-auth';
 import { drizzleAdapter } from 'better-auth/adapters/drizzle';
 
-import { pool } from '../database/postgres.js';
+import { pool } from '../../lib/db.js';
 
 const appOrigin = process.env.APP_ORIGIN;
 

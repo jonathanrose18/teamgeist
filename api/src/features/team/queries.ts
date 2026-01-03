@@ -1,11 +1,9 @@
-import type { Team } from '../../../domain/team.js';
+import type { Team, TeamId, TeamResponseDto } from './types.js';
 
-export type TeamResponseDto = {
-  readonly createdAt: string;
-  readonly id: string;
-  readonly name: string;
-  readonly updatedAt: string;
-};
+export async function getTeam(id: TeamId): Promise<Team | null> {
+  // TODO: Implement actual database query
+  return null;
+}
 
 export function toTeamResponseDto(team: Team): TeamResponseDto {
   return {

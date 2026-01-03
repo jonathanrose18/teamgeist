@@ -4,15 +4,13 @@ import { serve } from '@hono/node-server';
 
 import 'dotenv/config';
 
-import { appContainerMiddleware } from './interfaces/http/middleware/app-container.js';
-import { authRoutes } from './routes/auth.js';
-import { corsMiddleware } from './interfaces/http/middleware/cors.js';
-import { teamRoutes } from './routes/team.js';
+import { authRoutes } from './features/auth/routes.js';
+import { corsMiddleware } from './lib/cors.js';
+import { teamRoutes } from './features/team/routes.js';
 
 const app = new Hono();
 
 app.use(logger());
-app.use('/*', appContainerMiddleware);
 app.use('/*', corsMiddleware);
 
 app.route('/auth', authRoutes);
